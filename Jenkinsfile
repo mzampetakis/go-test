@@ -21,7 +21,8 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'GOARCH=amd64 GOOS=linux go build -o go-test *.go'
+                sh 'echo $BUILD_TIMESTAMP'
+                sh 'GOARCH=amd64 GOOS=linux go build -o go-test-$BUILD_TIMESTAMP *.go'
             }
         }
         
