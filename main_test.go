@@ -21,7 +21,7 @@ func TestAvg(t *testing.T) {
 			args: args{
 				nos: []int{-1, 0, 1},
 			},
-			want: -2,
+			want: 0,
 		},
 		{
 			args: args{
