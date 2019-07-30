@@ -1,6 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	
+	"github.com/sirupsen/logrus"
+)
+
+
+var logger = logrus.New()
 
 // Avg calculates the average of all integers
 func Avg(nos ...int) int {
@@ -15,6 +22,7 @@ func Avg(nos ...int) int {
 }
 
 func main() {
+	logger.Infof("Calculating Average")
 	numbers := []int{1, 4, 5, 6}
 
 	fmt.Println(Avg(numbers...))
