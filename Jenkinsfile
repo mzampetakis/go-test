@@ -14,7 +14,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'go get'
+                sh 'go get github.com/sirupsen/logrus'
                 sh 'go test --cover'
             }
         }
