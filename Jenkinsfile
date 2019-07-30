@@ -28,7 +28,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: "thesecret", variable: 'MY_SECRET')]) {
                 sh 'echo Deploying with secret:'
-                sh 'echo $PASSWORD'
+                sh 'echo $MY_SECRET'
                 }
             }
         }
